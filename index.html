@@ -5,11 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Counter App</title>
+    <link rel="stylesheet" href="main.css ">
 </head>
 <body>
-    
 
+    <!-- Wrapper -->
+    <div class="w-[100vw] h-[100vh] flex flex-col items-center justify-center bg-slate-700 gap-10 ">
+        <!-- Inc Dec Heading -->
+        <div class="text-cyan-600 font-medium text-[20px]"> Increment And Decrement</div>
 
+        <!-- Button Box -->
+        <div class="flex bg-white rounded-sm gap-12 text-[25px] p-3 px-5">
+
+            <!-- Decrement  -->
+            <button class="border-r-2 pr-5">
+                <i class="fa-solid fa-minus"></i>
+            </button>
+
+            <!-- Counter  -->
+            <div class="font-bold">
+                0
+            </div>
+
+            <!-- Increment  -->
+            <button class="border-l-2 pl-5">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Font Awesome script  -->
+    <script src="https://kit.fontawesome.com/0c29d0bd32.js" crossorigin="anonymous"></script>
+
+    <!-- Script  -->
     <script src="script.js"></script>
 </body>
 </html>
