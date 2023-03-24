@@ -5,42 +5,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Share Modal App</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
 
     <!-- Wrapper  -->
-    <div>
+    <div class="w-[100vw] h-[100vh] bg-black relative flex ">
 
         <!-- Red Circle -->
-        <div></div>
+        <div class="w-[13em] h-[13em] bg-[#be1c42] rounded-full top-[5%] left-[30%] fixed shadow-[0_0_50px_#d84869] animate-[circle1Animate_15s_infinite]"></div>
+
+        <!-- Blue Circle  -->
+        <div class="w-[19em] h-[19em] bg-[#5648d8] bg-gradient-to-r from-indigo-500 rounded-full bottom-[5%] right-[30%] absolute shadow-[0_0_50px_#5648d8] animate-[circle2Animate_8s_infinite]"></div>
+
 
         <!-- Card  -->
-        <div>
+        <div class="bg-[#ffffff1a] absolute  h-[450px] border-solid border-[#ffffff30] border-2 rounded-md items-center justify-evenly backdrop-filter-[15px] flex flex-col top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] p-[20px_50px] backdrop-blur-[15px] ">
             <!-- Profile Pic  -->
-            <img src="" alt="">
+            <img src="img.jpg" class="w-[150px] h-[150px] rounded-full" alt="">
 
             <!-- Name  -->
-            <div>Rahul Patil</div>
+            <div class="text-white text-[2rem] text-center">Rahul Patil</div>
 
             <!-- Description  -->
-            <div>Sofware Developer</div>
+            <h3 class="text-[#ffffff85]">Sofware Developer</h3>
 
             <!-- Sharing Modal Div  -->
-            <div>
-                <button>
+            <div class="flex justify-between gap-[10px]">
+               
+                <!-- Share Button  -->
+                <button onclick="openModal()" class="text-[#ffffffb9] border-solid border-[2px] border-[#ffffffb9] gap-[7px] p-[9px_12px] rounded-sm bg-[#ffffff00] hover:text-[#131313] hover:bg-[#ffffffb9] transition-all duration-500 ">
                     <i class="fa-solid fa-share"></i>
                     Share Profile
                 </button>
-                <button>Follow me</button>
+
+                <!-- Follow Button  -->
+                <button class="text-[#ffffffb9] w-[150px] border-solid border-[2px] p-[9px_12px] border-[#ffffffb9] bg-[#ffffff00] rounded-sm hover:text-[#131313] hover:bg-[#ffffffb9] transition-all duration-500 ">Follow me</button>
             </div>
 
         </div>
 
-        <!-- Blue Circle  -->
-        <div></div>
+        <!-- Modal Section  -->
+
+        <!-- Card wrapper  -->
+        <div class="flex flex-col border-2 border-[#ffffff59] w-[500px] rounded-md bg-[#00000088] fixed top-[50%] left-[50%] backdrop-blur-[10px] text-white z-1 p-[20px_25px] transition-all duration-500 ease-in-out modal ">
+
+            <!-- Heading  -->
+            <div class="flex justify-between border-b-[1px] border-[#ffffff88] mb-[25px] pb-[12px] text-[30px] font-bold">
+                
+                <h1>Share My Profile</h1>
+                <i onclick="closeModal()" class="fa-solid fa-xmark cursor-pointer"></i>
+            </div>
 
 
-    </div>
+            <!-- Share this via  -->
+            <div>
+                <h3 class="font-bold">Share this via</h3>
+
+                <!-- Links  -->
+                <div class="flex mt-[20px] items-center flex-wrap justify-between ">
+                    <a class="icon" id="facebook" href=""><i class="fa-brands fa-facebook-f"></i></a>
+                    <a class="icon" id="linkedin" href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a class="icon" id="github" href=""><i class="fa-brands fa-github"></i></a>
+                    <a class="icon" id="twitter" href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a class="icon" id="instagram" href=""><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>   
+
+
+        </div>
+
+        <!-- Overlay -->
+         <div class="overlay" onclick="closeModal()"></div>
 
 
     <!-- Font Awesome script  -->
